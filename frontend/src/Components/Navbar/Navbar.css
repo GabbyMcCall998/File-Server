@@ -60,6 +60,16 @@
     background-color: white;
   }
   
+  .search-container button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.075s;
+  }
+
+  .search-container button:active{
+    background-color: #515151;
+  }
+
   .search-wrapper {
     position: relative;
   }
@@ -89,13 +99,22 @@
     background-color: white;
   }
   
+  
   .login-button button:hover{
     background-color: black;
     color: white;
     transition: 0.075s;
   }
   
+  
   .login-button button:active{
     background-color: #515151;
   }
   
+  .nav-menu hr{
+    border: none;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background: #FF4141;
+  }

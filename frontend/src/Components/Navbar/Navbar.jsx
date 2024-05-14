@@ -1,16 +1,21 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css'; // Import CSS file for styling
 
 const Navbar = () => {
+
+    const [menu,setMenu] = useState("Home");
+
+
+
     return (  
         <div className='Navbar'>
             <div className='brand'>
                 <p>PaperTrail</p>
             </div>
             <ul className='nav-menu'>
-                <li>Home</li>
-                <li>Files</li>
+                <li onClick={()=>{setMenu("home")}}>Home{menu==="home"?<hr/>:<></>}</li>
+                <li onClick={()=>{setMenu("file")}}>Files{menu==="file"?<hr/>:<></>}</li>
                 <div className='search-container'>
                 <form  className='search' action="/search" method="get">
                     <div className="search-wrapper">
@@ -19,7 +24,6 @@ const Navbar = () => {
                     </div>
                 </form>
             </div>
-                <li>Profile</li>
             </ul>
             <div className='login-button'>
                 <button>Login</button>
