@@ -1,13 +1,39 @@
-import './LoginSignup.css';
+import { Link } from "react-router-dom";
+import './LoginSignup.css'
 
 
 
-const LoginPage = () => {
+const LoginSignup = () => {
+
+        const handleSubmit = (event) => {
+          event.preventDefault();
+          // Add logic for handling form submission
+        };
+
+
     return ( 
-        <div>
+      <div className="yoga">
+        <form  onSubmit={handleSubmit}>
+        <h3>Login Here</h3>
 
-        </div>
-     );
+        <input type="email" placeholder="Email"   required />
+
+        <input type="password" placeholder="Password" required />
+
+        <p>Don't have an account?<br/><Link to="/signup" style={{ textDecoration : 'none'}}>Sign Up</Link></p>
+        
+        
+        <button type="submit" className="sign">
+          Log In
+        </button>
+
+        <label htmlFor="password" className="forgot">
+          Forgot Password
+        </label>
+        </form>
+      </div>
+    );
 }
  
-export default LoginPage;
+ 
+export default LoginSignup;
