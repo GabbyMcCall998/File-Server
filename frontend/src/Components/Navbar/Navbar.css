@@ -81,9 +81,9 @@
   .search-wrapper button {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 20px;
     height: 100%;
-    padding: 6px 10px; /* Adjust padding as needed */
+    padding: 1px 10px; /* Adjust padding as needed */
   }
   
   .login-button button{
